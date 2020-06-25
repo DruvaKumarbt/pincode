@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="12dp"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Soil"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Water"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Rain"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+             />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <ToggleButton
+            android:id="@+id/soil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_button_circle_bg"
+            android:text="Soil"
+            android:textOff="DRY"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textOn="WET" />
+
+        <ToggleButton
+            android:id="@+id/humidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_button_circle_bg"
+            android:text="Humidity"
+            android:textOff="LOW"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.25"
+            android:textOn="HIGH"
+            android:textColor="#fff"
+            />
+
+        <ToggleButton
+            android:id="@+id/water"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_button_circle_bg"
+            android:text="Water"
+            android:layout_marginLeft="4dp"
+            android:textOff="LOW"
+            android:layout_weight="0.25"
+            android:textColor="#fff"
+            android:textOn="HIGH" />
+
+        <ToggleButton
+            android:id="@+id/rain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_button_circle_bg"
+            android:text="Rain"
+            android:textOff="CLOSE"
+            android:textColor="#fff"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="0.25"
+            android:textOn="OPEN" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        />
+
+    <ToggleButton
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toggle_button_circle_bg"
+        android:layout_gravity="center"
+        android:text="Temp"
+        android:textColor="#fff"
+        android:textOff="LOW"
+        android:textOn="HIGH" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Threshhold value should be around 4000 - 5000" 
+        android:id="@+id/tv1"
+        android:visibility="gone"
+        android:textSize="12pt"
+        />    
+
+     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="iProb"
+        android:id="@+id/button"      
+        android:textSize="12pt"    
+        android:gravity="center"
+        />
+
+    
+     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Speed" 
+        android:id="@+id/speed"      
+        android:textSize="12pt"    
+        android:gravity="center"   
+		        	
+        />
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Dictionary"
+        android:id="@+id/dict"
+        android:textSize="12pt"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+        
+</LinearLayout>

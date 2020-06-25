@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout"
+        android:layout_alignParentTop="true"
+        >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="your groupname"
+            android:layout_weight=".7"
+            android:id="@+id/text"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:id="@+id/send"
+            android:text="Submit"
+            />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="12dp"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/layout"
+        android:layout_marginBottom="4dp"
+        android:id="@+id/listview"
+        android:divider="@null"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+    </ListView>
+</RelativeLayout>

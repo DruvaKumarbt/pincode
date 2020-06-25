@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smart.ticketing"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".backendless.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDzyEXkkPzHGo6dfcNt9k8hNQOOvsvD8nc" />
+
+        <!-- ===================  all mainactivity goes here   ======================= -->
+
+        <activity
+            android:name=".metro.SmartTicketingActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".voter.LoginActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".metro.LoginActivity"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".metro.Home"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".scanner.CaptureActivity"
+            android:icon="@drawable/scannericon"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".attendance.AccessNotesActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".facereco.mobitravel.MapsActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.MainActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.Speedcaluclator"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.FirestationActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.AddRideActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.PoolRequestActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.ViewRidersActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".carpooling.ViewMyRidesActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".backendless.LoginActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".backendless.SplashActivity"
+            android:icon="@drawable/virtualexamlogo"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNotitle"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".parkingqr.MainActivity"
+            android:icon="@drawable/usericon"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".voter.admin.LoginActivity"
+            android:icon="@drawable/usericon"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+
+        <!-- ===================     mainactivities ends here   ======================= -->
+
+        <activity android:name=".museum.VehicleTheft" />
+        <activity android:name=".museum.Setting" />
+        <activity android:name=".museum.MainStart" />
+        <activity android:name=".museum.TextActivity" />
+        <activity android:name=".attendance.LeaveActivity" />
+
+        <receiver android:name=".attendance.AlarmReceiver" />
+
+        <service android:name=".attendance.MyAlarmService" />
+
+        <activity
+            android:name=".attendance.ViewFeedBackActivity"
+            android:label="Feedback" />
+        <activity android:name=".attendance.AbstractSheetActivity" />
+        <activity android:name=".attendance.NotifyIAMarksActivity" />
+        <activity
+            android:name=".attendance.MainActivity"
+            android:label="Home" />
+        <activity
+            android:name=".attendance.ViewTeachersActivity"
+            android:label="Teachers" />
+        <activity
+            android:name=".attendance.ViewAbstractSheetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".attendance.FeedBackMainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".attendance.ViewIdCardsPhoto"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".attendance.GeneralListViewActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".attendance.BroadcastMessageActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".attendance.AndroidTimeActivity" />
+        <activity
+            android:name=".virtualexam.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".virtualexam.ViewPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".virtualexam.UploadPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.AttendanceActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.AddmemberActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.MembersListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.PaymentDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.AddTrainerActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.ViewTrainersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.ViewMembersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.MemberHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.ViewMembersAttendanceActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.PaymentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".gym.AttendanceHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewProfileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewyoutubeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.LabMainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.LabHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.ForgotPasswordActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".museum.LoginActivity"
+            android:label="@string/app_name" />
+
+        <service android:name=".museum.MyAlarmService" />
+
+        <activity
+            android:name=".museum.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.admin.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.admin.VoteCountActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.admin.VoterListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.admin.AddCandidatesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.FindDoctorActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.HealthIssuesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.HealthDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.FingerprintActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".voter.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ItemsListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.MapsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".viewDataList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ConfirmOrderActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.OffersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.RecipeListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.AddCustomItemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ViewCustomItemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".metro.WalletInfo"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".metro.Fare"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".metro.Recharge"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".metro.SmartTicketingUser"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ControlHardwareActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".metro.Routemap"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".tollgate.MainStart"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.CustomerActivity"
+            android:label="@string/app_name" />
+
+        <!--
+        <receiver android:name=".metro.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".ration.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".tollgate.smsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".attendance.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".museum.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".parkingqr.AgriSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+                <receiver android:name=".qless.FarmersSmsReceiver">
+                    <intent-filter>
+                        <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                    </intent-filter>
+                </receiver>
+        -->
+
+        <!--<receiver android:name=".agriculture.AgriSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--
+        <receiver android:name=".parkingqr.ParkingSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <receiver android:name=".museum.smsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name=".garbage.ViewAreasActivity"
+             />
+
+        <activity
+            android:name=".garbage.RestaurantActivity"
+             />
+
+        <activity
+            android:name=".agriculture.KisanMainActivity"
+            android:label="Crop Diseasees" />
+        <activity android:name=".movierecom.MainActivity" />
+        <activity android:name=".movierecom.LoginActivity" />
+        <activity android:name=".movierecom.RegisterActivity" />
+        <activity android:name=".movierecom.MovieListActivity" />
+        <activity android:name=".movierecom.TheatreListActivity" />
+        <activity android:name=".chatbot.ChatBotActivity" />
+        <activity android:name=".chatbot.PlannerActivity" />
+        <activity android:name=".chatbot.LoginActivity" />
+        <activity android:name=".chatbot.RegisterActivity" />
+        <activity android:name=".chatbot.CreateGroupActivity" />
+        <activity android:name=".chatbot.MainActivity" />
+        <activity android:name=".chatbot.ViewGroupsActivity" />
+        <activity android:name=".chatbot.ChatActivity" />
+
+        <activity
+            android:name=".pincode.SearchForIdActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".pincode.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".pincode.AddressInfoActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".pincode.ViewPropertiesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".pincode.PropertyRegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".pincode.AddressRegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.CustomerActivity2"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.BillConfirmationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.BloodBankActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.RealEstateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.MallsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".backendless.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".backendless.ForgotPasswordActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.SearchItemLocationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.ViewCostActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.BookingActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.Home"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.ViewQRCode"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".bmtc.ApplyPasssActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".bmtc.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".bmtc.ViewQRCodeContentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".bmtc.RenewalPasssActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".parkingqr.viewDataList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".bmtc.PaymentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.ChatActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.PharmacyActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".medical.OneShotPreviewActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".museum.OneShotPreviewActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".medical.RatingActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.StudentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.CompanyDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.CompanyHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.PostDriveActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.ViewDrivePostsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.ViewStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.StudentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.CompanyDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.CompanyHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.PostDriveActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.ViewDrivePostsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.ViewStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.ViewEligibleStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".placements.QuestionsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.TimeTableHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".timetable.NotesActivity"
+            android:label="@string/app_name" />
+
+        <!--
+        <activity
+            android:name=".qless.MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        -->
+
+        <activity
+            android:name=".library.ChangePassword"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.SearchBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.ProfileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.SearchJournalsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.ViewRequestActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.QuestionPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.QuestionSemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".library.ProjectActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ration.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ration.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ration.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ration.FingerprintActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.BudgetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.CheckProductActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.CheckoutActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.RegisterCropActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.FarmersHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ViewMarketRateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".qless.ViewCartActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".facereco.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".agriculture.TransferActivity" />
+        <activity android:name=".agriculture.AddBlogActivity" />
+        <activity android:name=".agriculture.ViewBlogsActivity" />
+        <activity android:name=".agriculture.BlogsDetailsActivity" />
+        <activity android:name=".agriculture.CropDetailsList" />
+        <activity android:name=".agriculture.PhCropsDetailsActivity" />
+        <activity android:name=".agriculture.PredictionActivity" />
+        <activity
+            android:name=".agriculture.HomeActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".agriculture.LoginActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".agriculture.LandPledgeActivity"
+            android:label="Land Post/Rent" />
+        <activity
+            android:name=".agriculture.RegisterActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".ViewAmountActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".agriculture.OrdersActivity"
+            android:label="Orders" />
+        <activity
+            android:name=".agriculture.ItemsListActivity"
+            android:label="Items" />
+        <activity
+            android:name=".agriculture.PriceCalculatorActivity"
+            android:label="Price Calculator" />
+        <activity
+            android:name=".agriculture.ViewLandsActivity"
+            android:label="Lands" />
+        <activity
+            android:name=".agriculture.ViewOrdersActivity"
+            android:label="Orders" />
+        <activity
+            android:name=".agriculture.PublishCropsActivity"
+            android:label="Post Production" />
+        <activity
+            android:name=".agriculture.RegisterCropActivity"
+            android:label="Pre Production" />
+        <activity
+            android:name=".siren.SetTimeActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".siren.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".texttoplayer.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".grocestore.AddProductActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".grocestore.AddShopActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".grocestore.AdminHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".grocestore.ViewShopsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".grocestore.SearchShopsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.BankHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.UpdateprofileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.BankRequestBloodActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.RequestBloodActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".rarebloodbank.ViewNotificationsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.BidActivity"
+            android:label="@string/app_name" />
+
+        <!--
+            <activity
+            android:name=".kisanmitra.BidActivity"
+            android:label="@string/app_name" />
+        -->
+
+        <activity
+            android:name=".kisanmitra.BillConfirmationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.BudgetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.CheckoutActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ConfirmOrderActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ControlHardwareActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.FarmersHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ItemsListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.PublishCropsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.RealEstateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.RegisterCropActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewBidsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewBidsDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewCartActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewItemsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".kisanmitra.ViewMarketRateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".smarttransport.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".smarttransport.SecondActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".smarttransport.ViewAmountActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".campus.ShortlistStudentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.ViewBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.EditProfile"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.SearchByDepartment"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.SubmitAdsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.ViewDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.ViewMyBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.AddWishBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".olx.ViewWishBooksActivity"
+            android:label="@string/app_name" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".movierecom.MovieDetailsActivity" />
+        <activity android:name=".movierecom.BookingActivity" />
+        <activity android:name=".garbage.DetailsActivity"></activity>
+    </application>
+
+</manifest>

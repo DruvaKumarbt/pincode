@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_margin="12dp"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:text="Direction" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_marginTop="12dp"
+        android:text="Start Shopping" />
+
+    <Button
+        android:id="@+id/addcustomaitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_marginTop="12dp"
+        android:text="Add buy item" />
+
+
+    <Button
+        android:id="@+id/recipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_marginTop="12dp"
+        android:text="Recipe list" />
+
+
+    <Button
+        android:id="@+id/searchlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_marginTop="12dp"
+        android:text="Location of items" />
+
+
+</LinearLayout>

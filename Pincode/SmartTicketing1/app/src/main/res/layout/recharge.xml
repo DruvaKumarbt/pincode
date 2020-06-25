@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/fdfdsfds"
+    >
+
+
+    <EditText
+        android:id="@+id/userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter userId"
+        android:ems="10"
+        />
+
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter amount"
+        android:inputType="number"
+        android:ems="10"
+        />
+
+
+    <EditText
+        android:id="@+id/debitcardno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter cardno"
+        android:inputType="number"
+        android:ems="10"
+        />
+
+    <EditText
+        android:id="@+id/pinno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter pinno"
+        android:inputType="numberPassword"
+        android:ems="10"
+        />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:ems="10"
+        />
+
+
+
+</LinearLayout>

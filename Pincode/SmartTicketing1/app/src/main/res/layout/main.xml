@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/phone1"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:hint="Enter phone"
+        android:inputType="number"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/sendc"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:text="Send c"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        />
+
+    <EditText
+        android:id="@+id/cno"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:hint="Card No"
+         />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:inputType="numberSigned"
+        />
+
+    <EditText
+        android:id="@+id/amt"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberSigned"
+        />
+
+    <Button
+
+        android:id="@+id/reg"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:text="Register"
+         />
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:text="View" />
+</LinearLayout>

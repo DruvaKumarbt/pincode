@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageview"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher"
+        />
+
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="crop name"
+        android:visibility="gone"
+        android:textColor="@color/colorAccent"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="quantity in kgs/litres/dozen"
+        android:inputType="numberSigned"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+         />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/colorAccent"
+        android:hint="expected amount/Kg/Litres/dozen"
+        android:visibility="gone"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:ems="10"
+        android:visibility="gone"
+        android:hint="duration in months"
+        android:maxLength="10"
+        android:inputType="numberSigned" />
+
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:ems="10"
+        android:hint="harvested date dd/mm/yy"
+        android:visibility="gone"
+        android:maxLength="10"
+        android:inputType="date" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:text="Marketrate" />
+</LinearLayout>

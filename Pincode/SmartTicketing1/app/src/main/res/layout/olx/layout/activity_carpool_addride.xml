@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="12dp"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#740b0b"
+        android:ems="10"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:hint="source" />
+
+
+    <EditText
+        android:id="@+id/dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#740b0b"
+        android:ems="10"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:hint="Destination" />
+
+    <EditText
+        android:id="@+id/via"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#740b0b"
+        android:ems="10"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:hint="Via" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:layout_marginTop="12dp"
+        android:background="@color/blue"
+        android:text="Submit" />
+
+
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

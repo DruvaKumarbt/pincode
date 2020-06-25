@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+//    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.android.smart.ticketing"
+        minSdkVersion 15
+        targetSdkVersion 25
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layout/attendance',
+                            'src/main/res/layout/olx',
+                            'src/main/res/layout',
+                            'src/main/res'
+
+                    ]
+        }
+    }
+
+    dependencies {
+
+        implementation files('libs/core.jar')
+//        compile files('libs/backendless.jar')
+        implementation files('libs/mail.jar')
+        implementation files('libs/activation.jar')
+        implementation files('libs/additionnal.jar')
+        implementation 'com.android.support:appcompat-v7:26.1.0'
+        implementation 'com.jakewharton:butterknife:8.4.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+        implementation 'org.slf4j:slf4j-android:1.7.25'
+        annotationProcessor 'org.projectlombok:lombok:1.16.6'
+        implementation 'org.projectlombok:lombok:1.16.6'
+        implementation 'com.squareup.picasso:picasso:2.5.2'
+        implementation 'com.google.android.gms:play-services-maps:10.2.0'
+        implementation group: 'com.backendless', name: 'backendless', version: '4.4.0'
+        implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+        implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+        implementation 'com.jjoe64:graphview:4.2.1'
+        implementation files('libs/acra-4.5.0.jar')
+        implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+        implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.10.0'
+        implementation 'com.github.pedroSG94:AutoPermissions:1.0.3'
+        implementation "com.android.support:recyclerview-v7:26.1.0"
+
+    }
+}
+dependencies {
+    implementation 'com.google.android.gms:play-services-maps:+'
+    implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone no"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter place name"
+        >
+
+        <requestFocus />
+    </EditText>
+
+
+    <Button
+        android:id="@+id/direction"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Direction in maps" />
+
+
+
+
+    <!--HomeAutomation-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        >
+        <Button
+            android:id="@+id/bulbon"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="BulbOn" />
+
+        <Button
+            android:id="@+id/bulboff"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="BulbOff" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/fanon"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="FanOn" />
+
+        <Button
+            android:id="@+id/fanoff"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="FanOff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        >
+        <Button
+            android:id="@+id/chargeron"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="Socket On" />
+
+        <Button
+            android:id="@+id/chargeroff"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:text="Socket Off" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/track"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+
+        android:text="LOC" />
+
+    <Button
+        android:id="@+id/photo"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Photo" />
+
+    <Button
+        android:id="@+id/complain"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Complain" />
+
+    
+    
+    <Button
+        android:id="@+id/startengine"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Start vehicle" />
+    
+    <Button
+        android:id="@+id/stopengine"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Stop vehicle" />
+    
+    
+     <Button
+        android:id="@+id/neareststation"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Nearest Ambulance" />
+
+
+    <Button
+        android:id="@+id/thief"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Announce Thief" />
+
+    <Button
+        android:id="@+id/bus1"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Bus1" />
+    
+    <Button
+        android:id="@+id/bus2"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="Bus2" />
+
+    <Button
+        android:id="@+id/viewbbmp"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="View Data" />
+
+    <Button
+        android:id="@+id/dnd"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:text="DND" />
+
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Under the guidance of\nMallikarjun B.C"
+       android:layout_gravity="bottom|right"
+       android:textSize="18sp"
+       android:textColor="#000"
+       android:visibility="gone"
+       android:layout_marginLeft="12dp"
+       android:layout_marginTop="480dp"
+
+       />
+
+</LinearLayout>

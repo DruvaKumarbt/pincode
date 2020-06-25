@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_margin="8dp"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginBottom="12dp"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/buyproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy Products" />
+
+    <Button
+        android:id="@+id/postcrops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Crops" />
+
+    <Button
+        android:id="@+id/registercrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Crop" />
+
+    <Button
+        android:id="@+id/realEstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RealEstate" />
+
+
+    <Button
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather" />
+
+
+    <Button
+        android:id="@+id/marketrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MarketRate" />
+
+
+    <Button
+        android:id="@+id/viewbids"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Bids" />
+
+
+    <Button
+        android:id="@+id/dobid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Crops" />
+
+    <Button
+        android:id="@+id/youtubelink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Best Practices" />
+
+    <Button
+        android:id="@+id/viewprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Profile" />
+
+
+
+</LinearLayout>
+</ScrollView>

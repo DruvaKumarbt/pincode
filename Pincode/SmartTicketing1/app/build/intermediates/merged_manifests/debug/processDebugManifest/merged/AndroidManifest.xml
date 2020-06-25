@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.smart.ticketing"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.smart.ticketing.backendless.MyApplication"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDzyEXkkPzHGo6dfcNt9k8hNQOOvsvD8nc" />
+
+        <!-- ===================  all mainactivity goes here   ======================= -->
+
+        <activity
+            android:name="com.smart.ticketing.metro.SmartTicketingActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.voter.LoginActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.metro.LoginActivity"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.metro.Home"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.scanner.CaptureActivity"
+            android:icon="@drawable/scannericon"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.attendance.AccessNotesActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.facereco.mobitravel.MapsActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.MainActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.Speedcaluclator"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.FirestationActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.AddRideActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.PoolRequestActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.ViewRidersActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.carpooling.ViewMyRidesActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.backendless.LoginActivity"
+            android:icon="@drawable/app_icon"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.backendless.SplashActivity"
+            android:icon="@drawable/virtualexamlogo"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNotitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.parkingqr.MainActivity"
+            android:icon="@drawable/usericon"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.smart.ticketing.voter.admin.LoginActivity"
+            android:icon="@drawable/usericon"
+            android:label="@string/app_name" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+
+        <!-- ===================     mainactivities ends here   ======================= -->
+
+        <activity android:name="com.smart.ticketing.museum.VehicleTheft" />
+        <activity android:name="com.smart.ticketing.museum.Setting" />
+        <activity android:name="com.smart.ticketing.museum.MainStart" />
+        <activity android:name="com.smart.ticketing.museum.TextActivity" />
+        <activity android:name="com.smart.ticketing.attendance.LeaveActivity" />
+
+        <receiver android:name="com.smart.ticketing.attendance.AlarmReceiver" />
+
+        <service android:name="com.smart.ticketing.attendance.MyAlarmService" />
+
+        <activity
+            android:name="com.smart.ticketing.attendance.ViewFeedBackActivity"
+            android:label="Feedback" />
+        <activity android:name="com.smart.ticketing.attendance.AbstractSheetActivity" />
+        <activity android:name="com.smart.ticketing.attendance.NotifyIAMarksActivity" />
+        <activity
+            android:name="com.smart.ticketing.attendance.MainActivity"
+            android:label="Home" />
+        <activity
+            android:name="com.smart.ticketing.attendance.ViewTeachersActivity"
+            android:label="Teachers" />
+        <activity
+            android:name="com.smart.ticketing.attendance.ViewAbstractSheetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.attendance.FeedBackMainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.attendance.ViewIdCardsPhoto"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.attendance.GeneralListViewActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.attendance.BroadcastMessageActivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.smart.ticketing.attendance.AndroidTimeActivity" />
+        <activity
+            android:name="com.smart.ticketing.virtualexam.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.virtualexam.ViewPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.virtualexam.UploadPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.AttendanceActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.AddmemberActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.MembersListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.PaymentDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.AddTrainerActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.ViewTrainersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.ViewMembersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.MemberHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.ViewMembersAttendanceActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.PaymentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.gym.AttendanceHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewProfileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewyoutubeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.LabMainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.LabHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.ForgotPasswordActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.museum.LoginActivity"
+            android:label="@string/app_name" />
+
+        <service android:name="com.smart.ticketing.museum.MyAlarmService" />
+
+        <activity
+            android:name="com.smart.ticketing.museum.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.admin.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.admin.VoteCountActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.admin.VoterListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.admin.AddCandidatesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.FindDoctorActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.HealthIssuesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.HealthDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.FingerprintActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.voter.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ItemsListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.MapsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.viewDataList"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ConfirmOrderActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.OffersActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.RecipeListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.AddCustomItemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ViewCustomItemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.metro.WalletInfo"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.metro.Fare"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.metro.Recharge"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.metro.SmartTicketingUser"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ControlHardwareActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.metro.Routemap"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.tollgate.MainStart"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.CustomerActivity"
+            android:label="@string/app_name" />
+
+        <!--
+        <receiver android:name=".metro.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".ration.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".tollgate.smsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".attendance.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".museum.AttendanceSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".parkingqr.AgriSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+                <receiver android:name=".qless.FarmersSmsReceiver">
+                    <intent-filter>
+                        <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                    </intent-filter>
+                </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".agriculture.AgriSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
+        <receiver android:name=".parkingqr.ParkingSmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver android:name="com.smart.ticketing.museum.smsReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.smart.ticketing.garbage.ViewAreasActivity" />
+        <activity android:name="com.smart.ticketing.garbage.RestaurantActivity" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.KisanMainActivity"
+            android:label="Crop Diseasees" />
+        <activity android:name="com.smart.ticketing.movierecom.MainActivity" />
+        <activity android:name="com.smart.ticketing.movierecom.LoginActivity" />
+        <activity android:name="com.smart.ticketing.movierecom.RegisterActivity" />
+        <activity android:name="com.smart.ticketing.movierecom.MovieListActivity" />
+        <activity android:name="com.smart.ticketing.movierecom.TheatreListActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.ChatBotActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.PlannerActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.LoginActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.RegisterActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.CreateGroupActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.MainActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.ViewGroupsActivity" />
+        <activity android:name="com.smart.ticketing.chatbot.ChatActivity" />
+        <activity
+            android:name="com.smart.ticketing.pincode.SearchForIdActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.pincode.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.pincode.AddressInfoActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.pincode.ViewPropertiesActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.pincode.PropertyRegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.pincode.AddressRegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.CustomerActivity2"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.BillConfirmationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.BloodBankActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.RealEstateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.MallsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.backendless.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.backendless.ForgotPasswordActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.SearchItemLocationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.ViewCostActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.BookingActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.Home"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.ViewQRCode"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.bmtc.ApplyPasssActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.bmtc.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.bmtc.ViewQRCodeContentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.bmtc.RenewalPasssActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.parkingqr.viewDataList"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.bmtc.PaymentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.ChatActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.PharmacyActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.OneShotPreviewActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.museum.OneShotPreviewActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.medical.RatingActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.StudentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.CompanyDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.CompanyHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.PostDriveActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.ViewDrivePostsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.ViewStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.StudentHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.CompanyDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.CompanyHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.PostDriveActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.ViewDrivePostsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.ViewStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.ViewEligibleStudentsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.placements.QuestionsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.TimeTableHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.timetable.NotesActivity"
+            android:label="@string/app_name" />
+
+        <!--
+        <activity
+            android:name=".qless.MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        -->
+
+        <activity
+            android:name="com.smart.ticketing.library.ChangePassword"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.SearchBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.ProfileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.SearchJournalsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.ViewRequestActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.QuestionPaperActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.QuestionSemActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.library.ProjectActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.ration.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.ration.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.ration.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.ration.FingerprintActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.BudgetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.CheckProductActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.CheckoutActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.RegisterCropActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.FarmersHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ViewMarketRateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.qless.ViewCartActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.facereco.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name="com.smart.ticketing.agriculture.TransferActivity" />
+        <activity android:name="com.smart.ticketing.agriculture.AddBlogActivity" />
+        <activity android:name="com.smart.ticketing.agriculture.ViewBlogsActivity" />
+        <activity android:name="com.smart.ticketing.agriculture.BlogsDetailsActivity" />
+        <activity android:name="com.smart.ticketing.agriculture.CropDetailsList" />
+        <activity android:name="com.smart.ticketing.agriculture.PhCropsDetailsActivity" />
+        <activity android:name="com.smart.ticketing.agriculture.PredictionActivity" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.HomeActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.LoginActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.LandPledgeActivity"
+            android:label="Land Post/Rent" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.RegisterActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.smart.ticketing.ViewAmountActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.OrdersActivity"
+            android:label="Orders" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.ItemsListActivity"
+            android:label="Items" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.PriceCalculatorActivity"
+            android:label="Price Calculator" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.ViewLandsActivity"
+            android:label="Lands" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.ViewOrdersActivity"
+            android:label="Orders" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.PublishCropsActivity"
+            android:label="Post Production" />
+        <activity
+            android:name="com.smart.ticketing.agriculture.RegisterCropActivity"
+            android:label="Pre Production" />
+        <activity
+            android:name="com.smart.ticketing.siren.SetTimeActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.smart.ticketing.siren.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.texttoplayer.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.grocestore.AddProductActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.grocestore.AddShopActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.grocestore.AdminHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.grocestore.ViewShopsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.grocestore.SearchShopsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.BankHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.UpdateprofileActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.BankRequestBloodActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.RequestBloodActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.rarebloodbank.ViewNotificationsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.BidActivity"
+            android:label="@string/app_name" />
+
+        <!--
+            <activity
+            android:name=".kisanmitra.BidActivity"
+            android:label="@string/app_name" />
+        -->
+
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.BillConfirmationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.BudgetActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.CheckoutActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ConfirmOrderActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ControlHardwareActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.FarmersHomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ItemsListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.PublishCropsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.RealEstateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.RegisterCropActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewBidsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewBidsDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewCartActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewItemsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.kisanmitra.ViewMarketRateActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.smarttransport.HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.smarttransport.SecondActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.smarttransport.ViewAmountActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.campus.ShortlistStudentActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.ViewBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.EditProfile"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.SearchByDepartment"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.SubmitAdsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.ViewDetailsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.ViewMyBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.AddWishBooksActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.smart.ticketing.olx.ViewWishBooksActivity"
+            android:label="@string/app_name" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.android.smart.ticketing.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name="com.smart.ticketing.movierecom.MovieDetailsActivity" />
+        <activity android:name="com.smart.ticketing.movierecom.BookingActivity" />
+        <activity android:name="com.smart.ticketing.garbage.DetailsActivity" />
+        <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

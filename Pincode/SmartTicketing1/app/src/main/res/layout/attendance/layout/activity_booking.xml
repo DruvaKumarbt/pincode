@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smart.ticketing.movierecom.BookingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            >
+
+            <CheckBox
+                android:id="@+id/one"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="1" />
+
+            <CheckBox
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_centerInParent="true"
+                android:text="2"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:text="3"
+                android:scaleX="1.5"
+                android:layout_marginRight="12dp"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            >
+
+            <CheckBox
+                android:id="@+id/four"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="4" />
+
+            <CheckBox
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_centerInParent="true"
+                android:text="5"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:id="@+id/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:text="6"
+                android:scaleX="1.5"
+                android:layout_marginRight="12dp"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="12dp"
+            >
+
+            <CheckBox
+                android:id="@+id/seven"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="7" />
+
+            <CheckBox
+                android:id="@+id/eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_centerInParent="true"
+                android:text="8"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <CheckBox
+                android:id="@+id/nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:text="9"
+                android:scaleX="1.5"
+                android:layout_marginRight="12dp"
+                android:scaleY="1.5"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="10"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/book"
+        android:text="Book"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffff"
+        />
+
+</LinearLayout>

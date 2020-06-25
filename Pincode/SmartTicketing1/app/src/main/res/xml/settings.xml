@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:dialogMessage="Enter Threshold"
+        android:dialogTitle="@string/app_name"
+        android:key="threshhold"
+        android:summary="Enter Accelerometer threshold"
+        android:inputType="number"
+        android:title="Threshold" />
+    <EditTextPreference
+        android:dialogMessage="Enter First Mobile No"
+        android:dialogTitle="@string/app_name"
+        android:key="First No"
+        android:summary="the first no to send message"
+        android:inputType="number"
+        android:title="First No" />
+
+    <EditTextPreference
+        android:dialogMessage="Enter Second Mobile No"
+        android:dialogTitle="@string/app_name"
+        android:key="Second No"
+        android:summary="Enter Second No"
+        android:inputType="number"
+        android:title="Second No" />
+
+    <EditTextPreference
+        android:dialogMessage="Enter Third Mobile No"
+        android:dialogTitle="@string/app_name"
+        android:key="Police No"
+        android:summary="Enter Third No"
+        android:inputType="number"
+        android:title="Third No" />
+
+    <EditTextPreference
+        android:dialogMessage="Enter Email Id"
+        android:dialogTitle="@string/app_name"
+        android:key="emailid"
+        android:summary="Enter Email Id"
+        android:title="Email ID" />
+
+    <!--
+    <EditTextPreference
+        android:key="illdata"
+        android:summary="Enter past illness info"
+        android:dialogTitle="iProb Settings"
+        android:dialogMessage="Enter your past illness information"
+        android:title="Health info"
+        />
+
+
+    <EditTextPreference
+       android:key="redzone"
+         android:summary="Enter Redzone"
+         android:dialogTitle="iProb Settings"
+         android:dialogMessage="Enter Latitude and Longitude comma separated"
+         android:title="Red Zone Location"
+
+         />
+
+
+    <EditTextPreference android:key="bluezone"
+     android:summary="Enter Railway location"
+     android:dialogTitle="Railway Settings"
+     android:dialogMessage="Enter Latitude and Longitude comma separated"
+     android:title="Enter location"/>
+                 -->
+</PreferenceScreen>
